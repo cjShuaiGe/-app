@@ -25,7 +25,7 @@ public class AuditFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.audit_fragment,container,false);
+        View view=inflater.inflate(R.layout.fragment_audit,container,false);
         rc=view.findViewById(R.id.rc_audit);
         setData();
         adapter=new RcAuditAdapter(list,getActivity());

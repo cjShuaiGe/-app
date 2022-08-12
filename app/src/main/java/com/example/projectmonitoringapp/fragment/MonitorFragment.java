@@ -25,7 +25,7 @@ public class MonitorFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.monitor_fragment,container,false);
+        View view=inflater.inflate(R.layout.fragment_monitor,container,false);
         recyclerView=view.findViewById(R.id.rc_monitor);
         setData();
         adapter=new RcMonitorAdapter(list);

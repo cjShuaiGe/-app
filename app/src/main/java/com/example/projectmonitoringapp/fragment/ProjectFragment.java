@@ -21,7 +21,7 @@ public class ProjectFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View view=inflater.inflate(R.layout.project_fragment,container,false);
+            View view=inflater.inflate(R.layout.fragment_project,container,false);
             viewPager2=view.findViewById(R.id.vp2);
             t1=view.findViewById(R.id.tabs);
             setView();

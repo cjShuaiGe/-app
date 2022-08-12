@@ -25,7 +25,7 @@ public class UserFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.user_fragment,container,false);
+        View view=inflater.inflate(R.layout.fragment_user,container,false);
         rc=view.findViewById(R.id.rc_user);
         setData();
         adapter=new RcUserAdapter(list,getActivity());
