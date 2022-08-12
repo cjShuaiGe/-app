@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chat"
+        android:title="项目"
+        />
+
+    <item
+        android:id="@+id/account"
+        android:title="用户" />
+
+    <item
+        android:id="@+id/setting"
+        android:title="日志" />
+
+
+</menu>
