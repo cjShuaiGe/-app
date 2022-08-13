@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_caretaker_login.xml" value="0.24947916666666667" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
-        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_caretaker_login.xml" value="0.38645833333333335" />
-        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/button_corner.xml" value="0.221" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/shape.xml" value="0.221" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_carataker_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_caretaker_login.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_register.xml" value="0.24947916666666667" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_login.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>
