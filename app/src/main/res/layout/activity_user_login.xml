@@ -53,8 +53,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="182dp"
-        android:background="@drawable/shape"
-        android:enabled="false"
+        android:background="@drawable/button_corner"
         android:text="登录"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -68,6 +67,7 @@
         >
         <TextView
             android:id="@+id/user_login"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="用户登录"/>
