@@ -20,21 +20,24 @@
             android:text="一个用户"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
         <TextView
+            android:id="@+id/user_onlive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="在线"
+            android:layout_toEndOf="@+id/user_name"
             android:background="@drawable/background_run"
-            android:textColor="#10BE80"
-            android:layout_toEndOf="@+id/user_name"/>
+            android:text="在线"
+            android:textColor="#10BE80" />
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/add"
+            android:id="@+id/user_control"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20sp"
-            android:id="@+id/user_control"/>
+            android:src="@drawable/icon_more" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"

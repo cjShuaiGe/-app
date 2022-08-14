@@ -9,20 +9,20 @@
     android:background="#F2F3F3">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:background="#FFFFFF">
         <Button
             android:layout_width="30dp"
             android:layout_height="25sp"
             android:background="@drawable/icon_menu"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="27dp"
             android:layout_marginStart="20dp"
             android:id="@+id/bt_home"/>
       <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="40dp"
           android:layout_marginStart="16sp"
-          android:layout_marginTop="15dp"
+          android:layout_marginTop="20dp"
           android:layout_marginEnd="16dp"
           android:layout_marginBottom="15dp"
           android:background="@drawable/shape_search">
@@ -36,10 +36,11 @@
               android:hint="搜索" />
 
           <Button
+              android:id="@+id/project_search"
               android:layout_width="25sp"
               android:layout_height="30sp"
-              android:background="@drawable/icon_search"
-              android:layout_alignParentEnd="true"/>
+              android:layout_alignParentEnd="true"
+              android:background="@drawable/icon_search" />
 
       </RelativeLayout>
     </LinearLayout>

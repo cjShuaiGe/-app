@@ -1,30 +1,67 @@
 package com.example.projectmonitoringapp.model;
 
 public class RcUser {
-    private String userName;
-    private String registerTime;
+    private String message;
+    private String onLive;
+    private String phone;
+    private String position;
+    private String registerDate;
+    private String userId;
+    private String username;
 
-    public RcUser() {
+    public String getMessage() {
+        return message;
     }
 
-    public RcUser(String userName, String registerTime) {
-        this.userName = userName;
-        this.registerTime = registerTime;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getOnLive() {
+        return onLive;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setOnLive(String onLive) {
+        this.onLive = onLive;
     }
 
-    public String getRegisterTime() {
-        return registerTime;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setRegisterTime(String registerTime) {
-        this.registerTime = registerTime;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(String registerDate) {
+        this.registerDate = registerDate;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -7,36 +7,37 @@
     tools:context=".CaretakerLogin"
     android:orientation="vertical"
     android:background="#F4F4F4">
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E0E0E0"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="70dp"
+        android:background="#E0E0E0" />
 
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#FFFFFF"
-        android:layout_marginTop="52dp">
+        android:layout_marginTop="72dp"
+        android:background="#FFFFFF">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="30dp"
-            android:text="口令"
+            android:text="账号"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/et_kl"
+            android:id="@+id/et_zh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="30dp"
-            android:hint="请输入口令"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:hint="请输入账号" />
 
     </LinearLayout>
 
@@ -46,13 +47,47 @@
         android:layout_alignBottom="@+id/ll"
         android:background="#E0E0E0" />
 
+    <LinearLayout
+        android:id="@+id/lll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="133dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:text="密码"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_mm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:background="@color/white"
+            android:hint="请输入密码" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/lll"
+        android:background="#E0E0E0" />
+
+
     <Button
         android:id="@+id/bt_login"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="182dp"
+        android:layout_marginTop="232dp"
         android:background="@drawable/shape"
         android:enabled="false"
         android:text="登录"

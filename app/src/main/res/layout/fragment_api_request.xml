@@ -25,43 +25,45 @@
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="--%"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="80dp"/>
+                    android:layout_marginEnd="80dp"
+                    android:text="100%"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JS错误数"
-                    android:layout_marginStart="65dp"/>
+                    android:layout_marginStart="65dp"
+                    android:text="API错误数" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JS错误率"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="75dp"/>
+                    android:layout_marginEnd="65dp"
+                    android:text="API请求成功率" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
-
                 <TextView
                     android:id="@+id/zhoutongbi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:text="周同比：" />
+                    android:text="周同比："
+                    android:layout_marginStart="50dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,15 +76,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="周同比："
-                    android:layout_toStartOf="@+id/js_comparison_week"/>
+                    android:layout_toStartOf="@+id/api_comparison_week"/>
 
                 <TextView
-                    android:id="@+id/js_comparison_week"
+                    android:id="@+id/api_comparison_week"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="- -% ⬆"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="50dp"
+                    android:layout_marginEnd="60dp"
+                    android:text="- -% ⬆"
                     android:textColor="#FF5959" />
             </RelativeLayout>
             <RelativeLayout
@@ -111,10 +113,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
         <com.github.mikephil.charting.charts.CombinedChart
-            android:id="@+id/chart_js"
             android:layout_width="match_parent"
             android:layout_height="350dp"/>
     </androidx.cardview.widget.CardView>
-
 
 </LinearLayout>
