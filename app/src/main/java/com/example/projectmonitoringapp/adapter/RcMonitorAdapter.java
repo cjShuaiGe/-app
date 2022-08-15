@@ -64,11 +64,11 @@ public class RcMonitorAdapter extends RecyclerView.Adapter<RcMonitorAdapter.View
           } else if (monitor.getStatus().equals("0")){
                holder.status.setBackgroundResource(R.drawable.background_unaudited);
                holder.status.setText("未审核");
-               holder.status.setTextColor(Color.parseColor("#10BE80"));
+               holder.status.setTextColor(Color.parseColor("#666666"));
           } else {
                holder.status.setBackgroundResource(R.drawable.background_run);
                holder.status.setText("running");
-               holder.status.setTextColor(Color.parseColor("#666666"));
+               holder.status.setTextColor(Color.parseColor("#10BE80"));
           }
           holder.bt_monitor.setOnClickListener(new View.OnClickListener() {
                @Override

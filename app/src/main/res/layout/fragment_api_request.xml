@@ -116,5 +116,77 @@
             android:layout_width="match_parent"
             android:layout_height="350dp"/>
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请求端口："
+                    android:layout_marginStart="20sp"
+                    android:id="@+id/qingqiuduankou"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/qingqiuduankou"
+                    android:text="xxxxxxxxxxxxxxxxxxxxxxx"
+                    android:textColor="#E947A7FF" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成功率："
+                    android:layout_marginStart="20sp"
+                    android:id="@+id/chenggonglv"/>
+                <TextView
+                    android:id="@+id/api_request_success_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:layout_toRightOf="@+id/chenggonglv"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="失败率："
+                    android:layout_toRightOf="@+id/api_request_success_rate"
+                    android:layout_marginLeft="20sp"
+                    android:id="@+id/shibailv"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:layout_toRightOf="@+id/shibailv"
+                    android:id="@+id/api_request_failure_rate"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/api_request_failure_rate"
+                    android:text="请求耗时均值："
+                    android:layout_marginLeft="20sp"
+                    android:id="@+id/haoshiqingqiu"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/haoshiqingqiu"
+                    android:id="@+id/api_request_time_consume"
+                    android:text="100ms"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

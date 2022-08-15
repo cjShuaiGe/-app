@@ -84,6 +84,7 @@ public class MonitorFragment extends Fragment {
                     public void run() {
                         if (receive!=null){
                             if (receive.getCode()==200){
+//                                HttpUtil.setToken(response.header("Authorization"));
                                 String data= Crypt2.decryptGet(receive.getData());
                                 JSONArray jsonArray= null;
                                 try {

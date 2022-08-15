@@ -6,23 +6,25 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMonitoringApp"
         tools:targetApi="31">
+        <activity
+            android:name=".LogDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".ProjectMonitoringActivity"
             android:exported="false" />
         <activity
             android:name=".AccessActivity"
             android:exported="false" />
-
         <activity
             android:name=".CaretakerMainActivity"
             android:exported="false" />
@@ -32,7 +34,7 @@
         <activity
             android:name=".UserLoginActivity"
             android:exported="false"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".CaretakerLogin"
             android:exported="true">

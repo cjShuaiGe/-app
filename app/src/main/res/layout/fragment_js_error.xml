@@ -2,7 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -110,11 +122,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@drawable/background_ll"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25sp"
+                    android:layout_marginLeft="5dp"
+                    android:text="今日"
+                    android:textSize="18sp"/>
+                    <ImageView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:src="@drawable/icon_time"
+                        android:layout_marginLeft="20dp"/>
+                    <ImageView
+
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:src="@drawable/icon_down"
+                        android:layout_marginTop="6dp"/>
+                </LinearLayout>
+            </RelativeLayout>
         <com.github.mikephil.charting.charts.CombinedChart
             android:id="@+id/chart_js"
             android:layout_width="match_parent"
             android:layout_height="350dp"/>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_page_error"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

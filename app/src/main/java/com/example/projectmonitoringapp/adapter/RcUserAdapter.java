@@ -79,6 +79,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RcUser user=mlist.get(position);
+
         if (user.getUsername()!=null){
         holder.tv_user_name.setText(user.getUsername());
         } else {holder.tv_user_name.setText("null");}
@@ -94,12 +95,16 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
             holder.onLive.setBackgroundResource(R.drawable.background_run);
             holder.onLive.setTextColor(Color.parseColor("#10BE80"));
         }
+
+
         holder.bt_access.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               mactivity.startActivity(new Intent(mactivity, AccessActivity.class));
             }
         });
+
+
 
         holder.img_control.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +113,8 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
             }
         });
     }
+
+
 
     private void setUserControl(View v,RcUser user) {
         View view=mactivity.getLayoutInflater().inflate(R.layout.user_control_menu,null);
@@ -119,6 +126,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
                setTime(user);
             }
         });
+
 
         bt_down.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,9 +154,11 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
             @SuppressLint("LongLogTag")
             @Override
             public void onTimeSelect(Date date, View v) {
-                String str=getTime(date);
+                String str= String.valueOf(date.getTime());
+                System.out.println(str);
                 String key= Crypt2.getRandomString(16);
-                String text=new Gson().toJson(new Freeze(user.getUsername(),str));
+                String text=new Gson().toJson(new Freeze(user.getUserId(),str));
+                System.out.println(text);
                 sendFreeze(key,text);
             }
         })
@@ -183,7 +193,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                Receive receive=new Gson().fromJson(response.body().string(),Receive.class);
+//                Receive receive=new Gson().fromJson(response.body().string(),Receive.class);
                 System.out.println(response.body().string());
 //                mactivity.runOnUiThread(new Runnable() {
 //                    @Override

@@ -48,7 +48,6 @@ public class ProjectMonitoringActivity extends AppCompatActivity {
                     case 0:
                         tab.setText("JS错误");
                         break;
-
                     case 1:
                         tab.setText("API请求");
                         break;
@@ -58,6 +57,10 @@ public class ProjectMonitoringActivity extends AppCompatActivity {
                     case 3:
                         tab.setText("资源错误");
                         break;
+                    case 4:
+                        tab.setText("性能监控");
+                        break;
+
                 }
             }
         });

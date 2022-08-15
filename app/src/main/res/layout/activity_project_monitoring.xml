@@ -26,7 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:id="@+id/tabs2"
-        android:layout_marginTop="25sp"/>
+        android:layout_marginTop="25sp"
+        app:tabSelectedTextColor="#47A7FF"
+        app:tabIndicatorColor="#47A7FF"
+        />
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="0dp"

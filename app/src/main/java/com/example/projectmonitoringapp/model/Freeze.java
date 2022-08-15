@@ -1,30 +1,30 @@
 package com.example.projectmonitoringapp.model;
 
 public class Freeze {
-    private String username;
-    private String freezeDate;
+    private String userId;
+    private String date;
 
     public Freeze(String username, String freezeDate) {
-        this.username = username;
-        this.freezeDate = freezeDate;
+        this.userId = username;
+        this.date = freezeDate;
     }
 
     public Freeze() {
     }
 
     public String getUsername() {
-        return username;
+        return userId;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userId = username;
     }
 
     public String getFreezeDate() {
-        return freezeDate;
+        return date;
     }
 
     public void setFreezeDate(String freezeDate) {
-        this.freezeDate = freezeDate;
+        this.date = freezeDate;
     }
 }

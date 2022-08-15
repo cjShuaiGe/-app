@@ -9,8 +9,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectmonitoringapp.R;
+import com.example.projectmonitoringapp.adapter.RcPageErrorAdapter;
+import com.example.projectmonitoringapp.model.RcPageError;
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
@@ -29,16 +33,42 @@ import java.util.List;
 
 public class JsErrorFragment extends Fragment {
     CombinedChart combinedChart;
+    RecyclerView rc;
+    RcPageErrorAdapter adapter;
+    List<RcPageError> list=new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_js_error,container,false);
-        combinedChart=view.findViewById(R.id.chart_js);
+        initView(view);
         setXAxis();
         setData();
         setYAxis();
         return view;
 
+    }
+
+    private void initView(View view) {
+        combinedChart=view.findViewById(R.id.chart_js);
+        rc=view.findViewById(R.id.rc_page_error);
+        adapter=new RcPageErrorAdapter(list);
+        GridLayoutManager layoutManager=new GridLayoutManager(getActivity(),1);
+        rc.setLayoutManager(layoutManager);
+        rc.setAdapter(adapter);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setRcData();
+    }
+
+    private void setRcData() {
+        list.clear();
+        list.add(new RcPageError("xxxxxxxxxxxxxxxxxxxxxxxxxx","1"));
+        list.add(new RcPageError("xxxxxxxxxxxxxxxxxxxxxxxxxx","1"));
+        list.add(new RcPageError("xxxxxxxxxxxxxxxxxxxxxxxxxx","1"));
+        adapter.notifyDataSetChanged();
     }
 
     private void setYAxis() {

@@ -128,6 +128,7 @@ public class CaretakerLogin extends AppCompatActivity {
                             Toast.makeText(CaretakerLogin.this, "登录成功", Toast.LENGTH_SHORT).show();
                             HttpUtil.setToken(response.header("Authorization"));
                             startActivity(new Intent(CaretakerLogin.this, CaretakerMainActivity.class));
+                            finish();
                         } else {
                             Toast.makeText(CaretakerLogin.this, receive.getMsg(), Toast.LENGTH_SHORT).show();
                         }
