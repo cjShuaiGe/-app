@@ -79,8 +79,12 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RcUser user=mlist.get(position);
+        if (user.getUsername()!=null){
         holder.tv_user_name.setText(user.getUsername());
+        } else {holder.tv_user_name.setText("null");}
+        if (user.getRegisterDate()!=null){
         holder.tv_register_time.setText(user.getRegisterDate().substring(0,user.getRegisterDate().indexOf("T")));
+        } else {holder.tv_register_time.setText("null");}
         if (user.getOnLive().equals("0")){
             holder.onLive.setText("离线");
             holder.onLive.setBackgroundResource(R.drawable.background_unaudited);
