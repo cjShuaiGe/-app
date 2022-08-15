@@ -53,9 +53,19 @@ public class CaretakerLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CaretakerLogin.this,UserLoginActivity.class));
+                finish();
             }
         });
 
+
+
+        tv_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CaretakerLogin.this,RegisterActivity.class));
+                finish();
+            }
+        });
 
 
         et.addTextChangedListener(new TextWatcher() {

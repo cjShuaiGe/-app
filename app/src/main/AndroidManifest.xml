@@ -27,6 +27,13 @@
             android:name=".CaretakerMainActivity"
             android:exported="false" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserLoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <activity
             android:name=".CaretakerLogin"
             android:exported="true">
             <intent-filter>
