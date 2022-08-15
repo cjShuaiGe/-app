@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="13dp"
+    android:elevation="4dp"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/tv_monitor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一个项目"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20sp"/>
+        <TextView
+            android:id="@+id/project_monitor_status"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="running"
+            android:background="@drawable/background_run"
+            android:textColor="#10BE80"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简介："
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:id="@+id/tv_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这是一个项目简介"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_monitor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/bt_freeze"
+                android:background="@color/white"
+                android:outlineSpotShadowColor="@color/white"
+                android:text="进入监控"
+                android:textColor="#47A7FF" />
+            <Button
+                android:id="@+id/bt_freeze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="冻结项目"
+                android:background="@color/white"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
