@@ -1,6 +1,8 @@
 package com.example.projectmonitoringapp.fragment;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +14,19 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.bigkoo.pickerview.builder.TimePickerBuilder;
+import com.bigkoo.pickerview.listener.OnTimeSelectChangeListener;
+import com.bigkoo.pickerview.listener.OnTimeSelectListener;
+import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.projectmonitoringapp.R;
+import com.example.projectmonitoringapp.adapter.RcResourceEventAdapter;
+import com.example.projectmonitoringapp.model.RcEvent;
+import com.example.projectmonitoringapp.model.RcUser;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
@@ -26,21 +38,43 @@ import com.github.mikephil.charting.formatter.IValueFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ResourceErrorFragment extends Fragment {
     private String[] starArray = {"全部","<link>错误","<script>错误","<img>错误","<object>错误"};
     PieChart pc;
+    RecyclerView rc;
+    RcResourceEventAdapter adapter;
+    List<RcEvent> list=new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_resource_error,container,false);
         pc=view.findViewById(R.id.resource_error_pieChart);
+        rc=view.findViewById(R.id.rc_resource_event);
+        setRcView();
         initSpinner(view);
         setLegend();
         loadData();
         return view;
+    }
+
+    private void setRcView() {
+        adapter=new RcResourceEventAdapter(list);
+        GridLayoutManager layoutManager=new GridLayoutManager(getActivity(),1);
+        rc.setLayoutManager(layoutManager);
+        rc.setAdapter(adapter);
+        setRcData();
+    }
+
+    private void setRcData() {
+        list.clear();
+        list.add(new RcEvent("事例1","xxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxx"));
+        list.add(new RcEvent("事例2","xxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxx"));
+        adapter.notifyDataSetChanged();
     }
 
     public void setLegend(){
@@ -147,6 +181,38 @@ public class ResourceErrorFragment extends Fragment {
         public void onNothingSelected(AdapterView<?> adapterView) {
 
         }
+    }
+
+    private void setTime(RcUser user) {
+        TimePickerView pvTime = new TimePickerBuilder(getActivity(), new OnTimeSelectListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @SuppressLint("LongLogTag")
+            @Override
+            public void onTimeSelect(Date date, View v) {
+
+            }
+        })
+                .setTimeSelectChangeListener(new OnTimeSelectChangeListener() {
+                    @Override
+                    public void onTimeSelectChanged(Date date) {
+
+                    }
+                })
+                .setType(new boolean[]{true, true, true, false,false, false})
+                .setItemVisibleCount(5)
+                .setLineSpacingMultiplier(2.0f)
+                .isAlphaGradient(true)
+
+                .build();
+        pvTime.show();
+
+    }
+
+    private String getTime(Date date) {
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
+
     }
 
 

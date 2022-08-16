@@ -28,6 +28,7 @@ import com.example.projectmonitoringapp.CaretakerLogin;
 import com.example.projectmonitoringapp.CaretakerMainActivity;
 import com.example.projectmonitoringapp.Crypt2;
 import com.example.projectmonitoringapp.R;
+import com.example.projectmonitoringapp.model.ForceDown;
 import com.example.projectmonitoringapp.model.Freeze;
 import com.example.projectmonitoringapp.model.RcUser;
 import com.example.projectmonitoringapp.model.Receive;
@@ -53,6 +54,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
         Button bt_access;
         ImageView img_control;
         TextView onLive;
+        TextView tv_freeze_time;
         public ViewHolder(View view){
             super(view);
             tv_register_time=view.findViewById(R.id.register_time);
@@ -60,6 +62,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
             bt_access=view.findViewById(R.id.bt_access);
             img_control=view.findViewById(R.id.user_control);
             onLive=view.findViewById(R.id.user_onlive);
+            tv_freeze_time=view.findViewById(R.id.user_freeze_time);
         }
     }
 
@@ -76,6 +79,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
         return holder;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RcUser user=mlist.get(position);
@@ -86,10 +90,28 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
         if (user.getRegisterDate()!=null){
         holder.tv_register_time.setText(user.getRegisterDate().substring(0,user.getRegisterDate().indexOf("T")));
         } else {holder.tv_register_time.setText("null");}
+
+        if (user.getPosition().equals("-1")){
+            System.out.println(user.getUsername());
+            holder.tv_freeze_time.setVisibility(View.VISIBLE);
+            holder.tv_freeze_time.setText("冻结到："+user.getUnsealDate().substring(0,user.getUnsealDate().indexOf("T")));
+        }else {holder.tv_freeze_time.setText("");
+
+        }
+
         if (user.getOnLive().equals("0")){
+            if (user.getPosition().equals("-1")){
+//                System.out.println(user.getUsername());
+//                holder.tv_freeze_time.setVisibility(View.VISIBLE);
+//                holder.tv_freeze_time.setText("冻结到："+user.getUnsealDate().substring(0,user.getUnsealDate().indexOf("T")));
+                holder.onLive.setText("冻结");
+                holder.onLive.setBackgroundResource(R.drawable.background_freeze);
+                holder.onLive.setTextColor(Color.parseColor("#FF5959"));
+            }else {
             holder.onLive.setText("离线");
             holder.onLive.setBackgroundResource(R.drawable.background_unaudited);
             holder.onLive.setTextColor(Color.parseColor("#666666"));
+            }
         } else {
             holder.onLive.setText("在线");
             holder.onLive.setBackgroundResource(R.drawable.background_run);
@@ -131,6 +153,9 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
         bt_down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String key=Crypt2.getRandomString(16);
+                String text=new Gson().toJson(new ForceDown(user.getUserId()));
+                sendDown(key,text);
 
             }
         });
@@ -141,6 +166,33 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
         window.showAsDropDown(v,-250,0);
 
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void sendDown(String key, String text) {
+        HttpTool.postDown(key, text, new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                Receive receive=new Gson().fromJson(response.body().string(),Receive.class);
+//                System.out.println(response.body().string());
+                mactivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (receive.getCode()==200) {
+                            Toast.makeText(mactivity, "强制下线成功", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(mactivity, receive.getMsg(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
+    }
+
 
     @Override
     public int getItemCount() {
@@ -193,18 +245,18 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-//                Receive receive=new Gson().fromJson(response.body().string(),Receive.class);
-                System.out.println(response.body().string());
-//                mactivity.runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        if (receive.getCode()==200) {
-//                            Toast.makeText(mactivity, "冻结成功", Toast.LENGTH_SHORT).show();
-//                        } else {
-//                            Toast.makeText(mactivity, receive.getMsg(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
+                Receive receive=new Gson().fromJson(response.body().string(),Receive.class);
+//                System.out.println(response.body().string());
+                mactivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (receive.getCode()==200) {
+                            Toast.makeText(mactivity, "冻结成功", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(mactivity, receive.getMsg(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
     }

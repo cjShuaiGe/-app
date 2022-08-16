@@ -1,6 +1,8 @@
 package com.example.projectmonitoringapp.fragment;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +10,21 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bigkoo.pickerview.builder.TimePickerBuilder;
+import com.bigkoo.pickerview.listener.OnTimeSelectChangeListener;
+import com.bigkoo.pickerview.listener.OnTimeSelectListener;
+import com.bigkoo.pickerview.view.TimePickerView;
+import com.example.projectmonitoringapp.Crypt2;
 import com.example.projectmonitoringapp.R;
 import com.example.projectmonitoringapp.adapter.RcPageErrorAdapter;
+import com.example.projectmonitoringapp.model.Freeze;
 import com.example.projectmonitoringapp.model.RcPageError;
+import com.example.projectmonitoringapp.model.RcUser;
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
@@ -27,8 +37,11 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.google.gson.Gson;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class JsErrorFragment extends Fragment {
@@ -147,5 +160,37 @@ public class JsErrorFragment extends Fragment {
         combinedChart.setPinchZoom(true); // 比例缩放
         combinedData.setData(ba);
         combinedChart.setData(combinedData);
+    }
+
+    private void setTime(RcUser user) {
+        TimePickerView pvTime = new TimePickerBuilder(getActivity(), new OnTimeSelectListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @SuppressLint("LongLogTag")
+            @Override
+            public void onTimeSelect(Date date, View v) {
+
+            }
+        })
+                .setTimeSelectChangeListener(new OnTimeSelectChangeListener() {
+                    @Override
+                    public void onTimeSelectChanged(Date date) {
+
+                    }
+                })
+                .setType(new boolean[]{true, true, true, false,false, false})
+                .setItemVisibleCount(5)
+                .setLineSpacingMultiplier(2.0f)
+                .isAlphaGradient(true)
+
+                .build();
+        pvTime.show();
+
+    }
+
+    private String getTime(Date date) {
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
+
     }
 }

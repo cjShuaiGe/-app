@@ -8,6 +8,15 @@ public class RcUser {
     private String registerDate;
     private String userId;
     private String username;
+    private String unsealDate;
+
+    public String getUnsealDate() {
+        return unsealDate;
+    }
+
+    public void setUnsealDate(String unsealDate) {
+        this.unsealDate = unsealDate;
+    }
 
     public String getMessage() {
         return message;

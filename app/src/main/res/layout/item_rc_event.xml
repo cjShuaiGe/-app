@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/resource_event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="事例：1"
+            android:textColor="@color/black"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路径1："
+                android:id="@+id/lujingyi"
+                android:layout_marginStart="20sp"/>
+
+            <TextView
+                android:id="@+id/resource_event_s1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lujingyi"
+                android:text="xxxxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="#47A7FF" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路径1："
+                android:id="@+id/lujinger"
+                android:layout_marginStart="20sp"/>
+
+            <TextView
+                android:id="@+id/resource_event_s2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lujinger"
+                android:text="xxxxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="#47A7FF" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"/>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
