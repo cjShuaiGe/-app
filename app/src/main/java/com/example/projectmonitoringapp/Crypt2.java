@@ -8,7 +8,9 @@ import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
+import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
+import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 import java.util.Random;
@@ -19,7 +21,7 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
-public class Crypt {
+public class Crypt2 {
     /**
      * AES ECB 加密
      * @param message 需要加密的字符串
@@ -102,7 +104,7 @@ public class Crypt {
         byte[] decoded = Base64.getDecoder().decode(publicKey);
         RSAPublicKey pubKey = (RSAPublicKey) KeyFactory.getInstance(RSA).generatePublic(new X509EncodedKeySpec(decoded));
         /**RSA加密*/
-        Cipher cipher = Cipher.getInstance(RSA);
+        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
         cipher.init(Cipher.ENCRYPT_MODE, pubKey);
         byte[] content = cipher.doFinal(str.getBytes(UTF8));
         /**base64将字节转字符*/
@@ -125,4 +127,31 @@ public class Crypt {
         return sb.toString();
     }
 
+    /**
+     * 私钥解密
+     *
+     * @param str        密文
+     * @param privateKey 私钥
+     * @return
+     * @throws Exception
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static String decrypt(String str, String privateKey) throws Exception {
+        /**base64把密文转称字节*/
+        byte[] inputByte = Base64.getDecoder().decode(str);
+        /**base64解码私钥*/
+        byte[] decoded = Base64.getDecoder().decode(privateKey);
+        RSAPrivateKey priKey = (RSAPrivateKey) KeyFactory.getInstance("RSA").generatePrivate(new PKCS8EncodedKeySpec(decoded));
+        /**RSA解密*/
+        Cipher cipher = Cipher.getInstance("RSA");
+        cipher.init(Cipher.DECRYPT_MODE, priKey);
+        String outStr = new String(cipher.doFinal(inputByte));
+        return outStr;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static String decryptGet(String text){
+
+        return decryptECB(text,"Z6XB<$F9fA5jRT92");
+    }
 }
