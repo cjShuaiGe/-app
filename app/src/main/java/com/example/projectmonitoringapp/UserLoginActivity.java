@@ -46,6 +46,7 @@ public class UserLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserLoginActivity.this,RegisterActivity.class));
+                finish();
             }
         });
 
@@ -89,6 +90,7 @@ public class UserLoginActivity extends AppCompatActivity {
                             Toast.makeText(UserLoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
                             HttpUtil.setToken(response.header("Authorization"));
                             startActivity(new Intent(UserLoginActivity.this,UserMainActivity.class));
+                            finish();
                         } else {
                             Toast.makeText(UserLoginActivity.this, receive.getMsg(), Toast.LENGTH_SHORT).show();
                         }

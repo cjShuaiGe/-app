@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chat"
+        android:title="项目"
+        android:icon="@drawable/icon_monitor"/>
+
+    <item
+        android:id="@+id/issue"
+        android:title="发布"
+        android:icon="@drawable/issue"/>
+
+    <item
+        android:id="@+id/power"
+        android:title="权限"
+        android:icon="@drawable/right"/>
+
+
+</menu>
