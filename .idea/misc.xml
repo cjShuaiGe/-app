@@ -41,6 +41,7 @@
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_user.xml" value="0.3172295852928602" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_visit_detail.xml" value="0.31637451902522445" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_while_monitor.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_date_select.xml" value="0.31637451902522445" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_dropdown.xml" value="0.31637451902522445" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_access.xml" value="0.31637451902522445" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_audit.xml" value="0.30528846153846156" />
@@ -53,6 +54,8 @@
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/user_control_menu.xml" value="0.31637451902522445" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/menu-v26/menu.xml" value="0.38645833333333335" />
         <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/menu/menu.xml" value="0.3162393162393162" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2085" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.256" />
       </map>
     </option>
   </component>

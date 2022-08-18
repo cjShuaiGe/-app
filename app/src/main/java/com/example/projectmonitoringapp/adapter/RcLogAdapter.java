@@ -1,6 +1,7 @@
 package com.example.projectmonitoringapp.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.projectmonitoringapp.LogDetailActivity;
 import com.example.projectmonitoringapp.R;
 import com.example.projectmonitoringapp.model.RcLog;
 
@@ -61,7 +63,7 @@ public class RcLogAdapter extends RecyclerView.Adapter<RcLogAdapter.ViewHolder>{
         holder.detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             mactivity.startActivity(new Intent(mactivity, LogDetailActivity.class));
             }
         });
     }

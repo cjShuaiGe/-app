@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.example.projectmonitoringapp.Crypt2;
 import com.example.projectmonitoringapp.R;
 import com.example.projectmonitoringapp.adapter.RcMonitorAdapter;
+import com.example.projectmonitoringapp.liveData.MyLiveData;
 import com.example.projectmonitoringapp.model.Project;
 
 import com.example.projectmonitoringapp.model.Receive;
@@ -41,6 +43,7 @@ public class MonitorFragment extends Fragment {
     private RecyclerView recyclerView;
     List<Project> list=new ArrayList<>();
     private RcMonitorAdapter adapter;
+    List<Project> plist=new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,8 +55,31 @@ public class MonitorFragment extends Fragment {
         GridLayoutManager layoutManager=new GridLayoutManager(getActivity(),1);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
+        setSearch();
         return view;
+    }
+
+    private void setSearch() {
+        MyLiveData.getMessageData().observe(getActivity(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                list.clear();
+                list.addAll(plist);
+                List<Project> mlist = new ArrayList<>(list);
+                if (!s.equals("")){
+                list.clear();
+                for (int i=0;i<mlist.size();i++){
+                    for (int j=0;j<mlist.get(i).getProjectName().length();j++){
+
+                    if (mlist.get(i).getProjectName().substring(0,j+1).equals(s)){
+                        list.add(mlist.get(i));
+
+                    }
+                    }
+                }
+            }adapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
@@ -63,7 +89,6 @@ public class MonitorFragment extends Fragment {
     }
 
     private void setData() {
-
        HttpTool.getProject(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
@@ -102,6 +127,8 @@ public class MonitorFragment extends Fragment {
                                     }
                                     list.add(new Gson().fromJson(s,Project.class));
                                 }
+                                plist.clear();
+                                plist.addAll(list);
                                 adapter.notifyDataSetChanged();
 //                            } else {Toast.makeText(getActivity(),receive.getMsg(),Toast.LENGTH_SHORT).show();
                             } else {Toast.makeText(getActivity(),"receive.getMsg()",Toast.LENGTH_SHORT).show();

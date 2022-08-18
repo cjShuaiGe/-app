@@ -14,4 +14,12 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">#F4F4F4</item>
     </style>
+    <style name="Theme.Response" parent="Theme.ProjectMonitoringApp">
+        <!--图片路径-->
+        <item name="android:windowBackground">@drawable/actionpicture</item>
+        <!--设置全屏-->
+        <item name="android:windowFullscreen">true</item>
+        <!--设置透明隐藏顶部栏-->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
 </resources>

@@ -27,4 +27,9 @@ public class HttpTool {
     public static void postDown(String key, String text, okhttp3.Callback callback){
         HttpUtil.postToken("/user/forceLogout",key,text,callback);
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static void postProjectApplication(String key, String text, okhttp3.Callback callback){
+        HttpUtil.postToken("/project/update",key,text,callback);
+    }
 }

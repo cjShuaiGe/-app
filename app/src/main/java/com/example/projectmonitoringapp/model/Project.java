@@ -7,6 +7,15 @@ public class Project {
      private String projectUrl;
      private String status;
      private String unsealDate;
+     private String registerDate;
+
+     public String getRegisterDate() {
+          return registerDate;
+     }
+
+     public void setRegisterDate(String registerDate) {
+          this.registerDate = registerDate;
+     }
 
      public String getProjectId() {
           return projectId;

@@ -151,6 +151,7 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
 
 
         bt_down.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 String key=Crypt2.getRandomString(16);

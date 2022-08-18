@@ -13,10 +13,11 @@
         android:layout_marginTop="20dp">
 
         <TextView
-            android:layout_marginStart="20sp"
+            android:maxWidth="150dp"
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
             android:text="一个用户"
             android:textColor="@color/black"
             android:textSize="20sp" />
