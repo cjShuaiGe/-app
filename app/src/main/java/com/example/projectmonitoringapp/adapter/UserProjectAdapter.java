@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -56,7 +57,7 @@ public class UserProjectAdapter extends RecyclerView.Adapter<UserProjectAdapter.
         holder.bt_monitor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(mactivity,"申请成功，请等待审核",Toast.LENGTH_SHORT).show();
             }
         });
 

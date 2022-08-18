@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinMonitorActivity"
+    android:orientation="vertical"
+    android:background="#F2F3F3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/join_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如何加入监控"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.引入npm包"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="#C0C0C0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="npm install alife-logger --save"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.初始化"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:background="#C0C0C0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="const BrowserLogger = require('alife-logger');\nconst __bl = BrowserLogger.singleton("
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.下载依赖包"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textColor="#E047A7FF"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

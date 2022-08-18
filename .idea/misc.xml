@@ -5,17 +5,31 @@
       <map>
         <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/background_freeze.xml" value="0.1" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/button_corner.xml" value="0.221" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/grey_button_corner.xml" value="0.1" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/shape.xml" value="0.221" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_carataker_main.xml" value="0.1" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_caretaker_login.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_join_monitor.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_register.xml" value="0.24947916666666667" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_login.xml" value="0.24947916666666667" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_main.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_project_monitor.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_audit.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_monitor.xml" value="0.12132725430597771" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_audit_power.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_choose_monitor.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_control_audit.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_control_monitor.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_control_power.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_issue.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_monitor.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_monitor_power.xml" value="0.176" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_power.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_project.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_update_project.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_user_project.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_rc_monitor.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_audit_power.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_monitor_power.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_project.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/menu/menu.xml" value="0.24583333333333332" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/menu/user_menu.xml" value="0.23425925925925925" />

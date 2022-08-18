@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.projectmonitoringapp.fragment.UserProjectFragment;
+import com.example.projectmonitoringapp.fragment.issueFragment;
+import com.example.projectmonitoringapp.fragment.powerFragment;
 
 public class UserMainFragmentAdapter extends FragmentStateAdapter {
 
