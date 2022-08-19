@@ -13,7 +13,11 @@
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_register.xml" value="0.24947916666666667" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_login.xml" value="0.24947916666666667" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_main.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_notice_list.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_platform_add.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_platform_list.xml" value="0.176" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_project_monitor.xml" value="0.2" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_audit.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_audit_power.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_choose_monitor.xml" value="0.2" />
@@ -26,10 +30,11 @@
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_power.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_project.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_update_project.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_user_project.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_user_project.xml" value="0.2" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_rc_monitor.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_audit_power.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_monitor_power.xml" value="0.264" />
+        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_platform.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_project.xml" value="0.264" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/menu/menu.xml" value="0.24583333333333332" />
         <entry key="..\:/AS_Project/-app/app/src/main/res/menu/user_menu.xml" value="0.23425925925925925" />

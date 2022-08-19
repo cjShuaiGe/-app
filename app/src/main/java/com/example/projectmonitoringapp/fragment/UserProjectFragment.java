@@ -1,5 +1,6 @@
 package com.example.projectmonitoringapp.fragment;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,18 +8,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.CheckResult;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectmonitoringapp.Crypt2;
 import com.example.projectmonitoringapp.R;
+import com.example.projectmonitoringapp.UserLoginActivity;
+import com.example.projectmonitoringapp.UserNoticeListActivity;
+import com.example.projectmonitoringapp.UserPlatformAddActivity;
+import com.example.projectmonitoringapp.UserPlatformListActivity;
 import com.example.projectmonitoringapp.adapter.UserProjectAdapter;
 import com.example.projectmonitoringapp.model.Project;
 import com.example.projectmonitoringapp.model.Receive;
@@ -44,6 +52,11 @@ public class UserProjectFragment extends Fragment {
     private EditText et_search;
     private Button bt_search;
     private UserProjectAdapter adapter;
+    private DrawerLayout mDrawerLayout;
+    private RelativeLayout notice_list;
+    private RelativeLayout platform_add;
+    private RelativeLayout platform_list;
+    private RelativeLayout login_back;
 
     @Nullable
     @Override
@@ -59,6 +72,48 @@ public class UserProjectFragment extends Fragment {
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(),1);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
+        mDrawerLayout = (DrawerLayout) view.findViewById(R.id.drawer_layout);
+        bt_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        notice_list = (RelativeLayout) view.findViewById(R.id.rl_notice_list);
+        notice_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), UserNoticeListActivity.class));
+            }
+        });
+
+        platform_add = (RelativeLayout) view.findViewById(R.id.rl_platform_add);
+        platform_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), UserPlatformAddActivity.class));
+            }
+        });
+
+        platform_list = (RelativeLayout) view.findViewById(R.id.rl_platform_list);
+        platform_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), UserPlatformListActivity.class));
+            }
+        });
+
+        login_back = (RelativeLayout) view.findViewById(R.id.rl_login_back);
+        login_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UserLoginActivity.class);
+                intent.putExtra("loginBack","yes");
+                startActivity(intent);
+            }
+        });
 
         return view;
 

@@ -17,6 +17,18 @@
         android:theme="@style/Theme.ProjectMonitoringApp"
         tools:targetApi="31">
         <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserPlatformListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserPlatformAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserNoticeListActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserProjectMonitorActivity"
             android:exported="false" />
         <activity
