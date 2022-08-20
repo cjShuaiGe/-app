@@ -345,30 +345,37 @@ public class ApiRequestFragment extends Fragment {
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
-                                    mlist.clear();
-                                    for (int i=0;i<jsonArray.length()-1;i++){
-                                        String s= null;
-                                        try {
-                                            s = jsonArray.get(i).toString();
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
-                                        mlist.add(new Gson().fromJson(s, ApiPicture.class));
+                                    try {
+                                        if (!jsonArray.getJSONObject(0).isNull("percent")){
 
+                                        mlist.clear();
+                                        for (int i=0;i<jsonArray.length()-1;i++){
+                                            String s= null;
+                                            try {
+                                                s = jsonArray.get(i).toString();
+                                            } catch (JSONException e) {
+                                                e.printStackTrace();
+                                            }
+                                            mlist.add(new Gson().fromJson(s, ApiPicture.class));
+
+                                        }
+
+                                        List<BarEntry> barEntries2=new ArrayList<>();
+                                        List<BarEntry> barEntries=new ArrayList<>();
+                                        List<Entry> entries=new ArrayList<>();
+                                        for (int j=0;j<mlist.size();j++){
+                                            ApiPicture picture=mlist.get(mlist.size()-1-j);
+    //                                    System.out.println(picture.getPercent());
+                                            entries.add(new Entry(j,picture.getPercent()));
+                                            barEntries.add(new BarEntry(j,picture.getDefeatCount()));
+                                            barEntries2.add(new BarEntry(j,picture.getCount()));
+                                        }
+                                        setXAxis();
+                                        setYAxis();
+                                        setData(entries,barEntries,barEntries2);}else {setJsPictureData(i);}
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
                                     }
-                                    List<BarEntry> barEntries2=new ArrayList<>();
-                                    List<BarEntry> barEntries=new ArrayList<>();
-                                    List<Entry> entries=new ArrayList<>();
-                                    for (int j=0;j<mlist.size();j++){
-                                        ApiPicture picture=mlist.get(mlist.size()-1-j);
-//                                    System.out.println(picture.getPercent());
-                                        entries.add(new Entry(j,picture.getPercent()));
-                                        barEntries.add(new BarEntry(j,picture.getDefeatCount()));
-                                        barEntries2.add(new BarEntry(j,picture.getCount()));
-                                    }
-                                    setXAxis();
-                                    setYAxis();
-                                    setData(entries,barEntries,barEntries2);
                                 } else {
                                     Toast.makeText(getActivity(),"获取失败",Toast.LENGTH_SHORT).show();}
                             }

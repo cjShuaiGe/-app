@@ -17,12 +17,27 @@
         android:theme="@style/Theme.ProjectMonitoringApp"
         tools:targetApi="31">
         <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserPlatformListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserPlatformAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserNoticeListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProjectMonitorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JoinMonitorActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserMainActivity"
             android:exported="false"
             android:launchMode="singleTask" />
-        <activity
-            android:name=".LogDetailActivity"
-            android:exported="false" />
         <activity
             android:name=".ProjectMonitoringActivity"
             android:exported="false" />
@@ -34,11 +49,17 @@
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTask" />
         <activity
             android:name=".UserLoginActivity"
             android:exported="false"
             android:launchMode="singleTask" />
+
+        <activity
+            android:name=".LogDetailActivity"
+            android:exported="false" />
+
         <activity
             android:name=".CaretakerLogin"
             android:exported="true"
