@@ -17,6 +17,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
         <TextView
+            android:maxWidth="150dp"
             android:id="@+id/tv_monitor_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,6 +33,13 @@
             android:text="running"
             android:background="@drawable/background_run"
             android:textColor="#10BE80"/>
+        <TextView
+            android:id="@+id/tv_monitor_freeze_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="冻结至：2022-8-16"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
     </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

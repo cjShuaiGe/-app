@@ -3,45 +3,66 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/background_freeze.xml" value="0.1" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/button_corner.xml" value="0.221" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/grey_button_corner.xml" value="0.1" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/drawable/shape.xml" value="0.221" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_carataker_main.xml" value="0.1" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_caretaker_login.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_join_monitor.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_register.xml" value="0.24947916666666667" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_login.xml" value="0.24947916666666667" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_main.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_notice_list.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_platform_add.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_platform_list.xml" value="0.176" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_user_project_monitor.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_audit.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_audit_power.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_choose_monitor.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_control_audit.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_control_monitor.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_control_power.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_issue.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_monitor.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_monitor_power.xml" value="0.176" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_power.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_project.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_update_project.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/fragment_user_project.xml" value="0.2" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_rc_monitor.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_audit_power.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_monitor_power.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_platform.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/layout/item_user_project.xml" value="0.264" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/menu/menu.xml" value="0.24583333333333332" />
-        <entry key="..\:/AS_Project/-app/app/src/main/res/menu/user_menu.xml" value="0.23425925925925925" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_bt_agree.xml" value="0.2355" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_bt_noagree.xml" value="0.2355" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_freeze.xml" value="0.256" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_ll.xml" value="0.256" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_run.xml" value="0.2355" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_spanier.xml" value="0.256" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/background_unaudited.xml" value="0.256" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/ic_launcher_background.xml" value="0.256" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/shape.xml" value="0.2355" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/shape_click.xml" value="0.2355" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/drawable/shape_search.xml" value="0.2355" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_access.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_audit_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_carataker_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_caretaker_login.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_log_detail.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_log_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_monitor_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_project_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_project_monitoring.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_register.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_user_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/activity_user_login.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/dialog_project.xml" value="0.3854166666666667" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_api_request.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_audit.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_js_error.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_log.xml" value="0.33" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_log_api.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_log_gradle.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_monitor.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_performance_monitor.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_project.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_resource_error.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_user.xml" value="0.3172295852928602" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_visit_detail.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/fragment_while_monitor.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_api_port.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_date_select.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_dropdown.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_event_filename.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_access.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_audit.xml" value="0.30528846153846156" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_event.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_log.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_monitor.xml" value="0.3854166666666667" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_pack.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_rc_page_error.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_select.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/item_user.xml" value="0.33" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/layout/user_control_menu.xml" value="0.31637451902522445" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/menu-v26/menu.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/menu/menu.xml" value="0.3162393162393162" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2085" />
+        <entry key="..\:/Android Sudio Demo/-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.256" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

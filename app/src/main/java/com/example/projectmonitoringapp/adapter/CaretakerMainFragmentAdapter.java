@@ -8,6 +8,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.projectmonitoringapp.fragment.LogFragment;
+import com.example.projectmonitoringapp.fragment.LogGradleFragment;
 import com.example.projectmonitoringapp.fragment.ProjectFragment;
 import com.example.projectmonitoringapp.fragment.UserFragment;
 
@@ -25,7 +26,7 @@ public class CaretakerMainFragmentAdapter extends FragmentStateAdapter {
             case 1:
                 return new UserFragment();
             default:
-                return new LogFragment();
+                return new LogGradleFragment();
         }
     }
 

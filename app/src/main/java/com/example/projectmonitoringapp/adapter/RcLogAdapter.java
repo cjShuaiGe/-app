@@ -1,6 +1,7 @@
 package com.example.projectmonitoringapp.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.projectmonitoringapp.LogDetailActivity;
 import com.example.projectmonitoringapp.R;
 import com.example.projectmonitoringapp.model.RcLog;
 
@@ -53,15 +55,18 @@ public class RcLogAdapter extends RecyclerView.Adapter<RcLogAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RcLog log=mlist.get(position);
-        holder.name.setText(log.getName());
-        holder.visitNumber.setText(log.getVisitNumber());
-        holder.visitPeople.setText(log.getVisitPeople());
-        holder.error.setText(log.getError());
-        holder.rate.setText(log.getRate()+"%");
+        holder.name.setText(log.getPackageName());
+        holder.visitNumber.setText(log.getVisits());
+        holder.visitPeople.setText(log.getVisits_people());
+        holder.error.setText(log.getDefeatCount());
+        float f= Float.parseFloat(log.getRate())*100f;
+        holder.rate.setText(f+"%");
         holder.detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(mactivity, LogDetailActivity.class);
+                intent.putExtra("packName",log.getPackageName());
+             mactivity.startActivity(intent);
             }
         });
     }

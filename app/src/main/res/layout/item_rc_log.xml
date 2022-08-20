@@ -17,6 +17,7 @@
             android:layout_marginTop="15dp">
 
             <TextView
+                android:maxWidth="250dp"
                 android:id="@+id/log_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="15dp"
-                android:text="详细信息"
+                android:text="接口"
                 android:textColor="#47A7FF"
                 android:textSize="15sp" />
         </RelativeLayout>
@@ -91,11 +92,12 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="70dp"
                 android:text="100%" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="成功率：："
-                android:layout_toLeftOf="@+id/log_success_rate"/>
+                android:layout_toLeftOf="@+id/log_success_rate"
+                android:text="失败率：：" />
         </RelativeLayout>
     </LinearLayout>
 

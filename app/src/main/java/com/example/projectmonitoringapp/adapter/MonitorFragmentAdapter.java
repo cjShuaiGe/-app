@@ -9,8 +9,10 @@ import com.example.projectmonitoringapp.fragment.ApiRequestFragment;
 import com.example.projectmonitoringapp.fragment.AuditFragment;
 import com.example.projectmonitoringapp.fragment.JsErrorFragment;
 import com.example.projectmonitoringapp.fragment.MonitorFragment;
+import com.example.projectmonitoringapp.fragment.PerformanceMonitorFragment;
 import com.example.projectmonitoringapp.fragment.ResourceErrorFragment;
 import com.example.projectmonitoringapp.fragment.VisitDetailFragment;
+import com.example.projectmonitoringapp.fragment.WhileMonitorFragment;
 
 public class MonitorFragmentAdapter extends FragmentStateAdapter {
     public MonitorFragmentAdapter(@NonNull FragmentActivity fragmentActivity){
@@ -26,9 +28,10 @@ public class MonitorFragmentAdapter extends FragmentStateAdapter {
             case 1:
                 return new ApiRequestFragment();
             case 2:
-                return new VisitDetailFragment();
-            default:
                 return new ResourceErrorFragment();
+            default:
+                return new PerformanceMonitorFragment();
+
 
         }
     }
