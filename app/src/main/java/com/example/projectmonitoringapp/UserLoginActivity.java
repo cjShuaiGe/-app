@@ -27,7 +27,7 @@ import okhttp3.Response;
 
 public class UserLoginActivity extends AppCompatActivity {
 
-    Intent intent = getIntent();
+    Intent intent ;
 
     //刷新每次传入的Intent
     @Override
@@ -40,9 +40,11 @@ public class UserLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
+        intent=getIntent();
+        if (intent.getStringExtra("loginBack")!=null){
         if (intent.getStringExtra("loginBack").equals("yes")) {
             Toast.makeText(UserLoginActivity.this,"成功退出登录",Toast.LENGTH_SHORT).show();
-        }
+        }}
 
         TextView caretakerLoginTextView = (TextView) findViewById(R.id.caretaker_login);
         caretakerLoginTextView.setOnClickListener(new View.OnClickListener() {
