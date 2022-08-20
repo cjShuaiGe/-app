@@ -19,6 +19,11 @@ public class HttpTool {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
+    public static void postRegister(String key, String text, okhttp3.Callback callback) {
+        HttpUtil.postHttp("/user/register",key,text,callback);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public static void postFreeze(String key, String text, okhttp3.Callback callback) {
         HttpUtil.postToken("/user/freezeUser", key, text, callback);
     }

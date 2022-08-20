@@ -338,7 +338,7 @@ public class ApiRequestFragment extends Fragment {
                             if (receive!=null){
                                 if (receive.getCode()==200){
                                     String data= Crypt2.decryptECB(receive.getData(),key);
-//                                    System.out.println(data);
+                                    System.out.println("data:"+data);
                                     JSONArray jsonArray= null;
                                     try {
                                         jsonArray = new JSONArray(data);
