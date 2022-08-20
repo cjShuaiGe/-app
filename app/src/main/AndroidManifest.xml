@@ -17,6 +17,10 @@
         android:theme="@style/Theme.ProjectMonitoringApp"
         tools:targetApi="31">
         <activity
+            android:name=".UserMainActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
             android:name=".LogDetailActivity"
             android:exported="false" />
         <activity
