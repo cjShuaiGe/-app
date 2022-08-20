@@ -9,39 +9,43 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectmonitoringapp.R;
-import com.example.projectmonitoringapp.model.RcEvent;
+import com.example.projectmonitoringapp.model.ApiPort;
 
 import java.util.List;
 
-public class RcResourceEventAdapter extends RecyclerView.Adapter<RcResourceEventAdapter.ViewHolder>{
-    private List<RcEvent> mlist;
+public class RcApiBiaoAdapter extends RecyclerView.Adapter<RcApiBiaoAdapter.ViewHolder>{
+    List<ApiPort> mlist;
     static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView tv_s1;
-
+        TextView uri;
+        TextView rate;
+        TextView time;
         public ViewHolder (View view){
             super(view);
-            tv_s1=view.findViewById(R.id.resource_event_s1);
-
+            uri=view.findViewById(R.id.api_port_uri);
+            rate=view.findViewById(R.id.api_request_success_rate);
+            time=view.findViewById(R.id.api_request_time_consume);
         }
     }
 
-    public RcResourceEventAdapter(List<RcEvent> list){
+    public RcApiBiaoAdapter (List<ApiPort> list){
         mlist=list;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_event_filename,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_api_port,parent,false);
         ViewHolder holder=new ViewHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        RcEvent event=mlist.get(position);
-        holder.tv_s1.setText(event.getName());
-
+        ApiPort port=mlist.get(position);
+        float f=Float.parseFloat(port.getRate())*100;
+        holder.rate.setText(f+"%");
+        holder.uri.setText(port.getUri());
+        holder.time.setText(port.getAvgResponseTime()+"ms");
     }
 
     @Override

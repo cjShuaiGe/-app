@@ -31,6 +31,7 @@ public class LogApiFragment extends Fragment {
         GridLayoutManager layoutManager=new GridLayoutManager(getActivity(),1);
         rc.setLayoutManager(layoutManager);
         rc.setAdapter(adapter);
+
         setData();
         return view;
     }

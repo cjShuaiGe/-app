@@ -32,7 +32,7 @@ public class HttpUtil {
 //            System.out.println("encryptKey = " + encryptKey);
             String str=toCrypt(text,key);
             str = decode(str);
-            System.out.println(str);
+//            System.out.println(str);
             RequestBody body=RequestBody.Companion.create(str,JSON);
             Request request=new Request.Builder()
                     .url("http://39.98.41.126:31100"+url)
@@ -131,7 +131,7 @@ public class HttpUtil {
 //            System.out.println("encryptKey = " + encryptKey);
             String str=toCrypt(text,key);
             str = decode(str);
-            System.out.println(str);
+//            System.out.println(str);
             RequestBody body=RequestBody.Companion.create(str,JSON);
             Request request=new Request.Builder()
                     .url("http://39.98.41.126:31100"+url)

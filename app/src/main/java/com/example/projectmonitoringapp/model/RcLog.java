@@ -1,53 +1,53 @@
 package com.example.projectmonitoringapp.model;
 
 public class RcLog {
-    private String name;
-    private String visitNumber;
-    private String visitPeople;
-    private String error;
+    private String packageName;
+    private String visits;
+    private String visits_people;
+    private String defeatCount;
     private String rate;
 
     public RcLog() {
     }
 
-    public RcLog(String name, String visitNumber, String visitPeople, String error, String rate) {
-        this.name = name;
-        this.visitNumber = visitNumber;
-        this.visitPeople = visitPeople;
-        this.error = error;
+    public RcLog(String packageName, String visits, String visits_people, String defeatCount, String rate) {
+        this.packageName = packageName;
+        this.visits = visits;
+        this.visits_people = visits_people;
+        this.defeatCount = defeatCount;
         this.rate = rate;
     }
 
-    public String getName() {
-        return name;
+    public String getPackageName() {
+        return packageName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
     }
 
-    public String getVisitNumber() {
-        return visitNumber;
+    public String getVisits() {
+        return visits;
     }
 
-    public void setVisitNumber(String visitNumber) {
-        this.visitNumber = visitNumber;
+    public void setVisits(String visits) {
+        this.visits = visits;
     }
 
-    public String getVisitPeople() {
-        return visitPeople;
+    public String getVisits_people() {
+        return visits_people;
     }
 
-    public void setVisitPeople(String visitPeople) {
-        this.visitPeople = visitPeople;
+    public void setVisits_people(String visits_people) {
+        this.visits_people = visits_people;
     }
 
-    public String getError() {
-        return error;
+    public String getDefeatCount() {
+        return defeatCount;
     }
 
-    public void setError(String error) {
-        this.error = error;
+    public void setDefeatCount(String defeatCount) {
+        this.defeatCount = defeatCount;
     }
 
     public String getRate() {

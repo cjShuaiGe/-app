@@ -30,6 +30,7 @@
                 android:layout_marginTop="25sp">
 
                 <TextView
+                    android:id="@+id/js_error_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
@@ -37,25 +38,28 @@
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/js_error_rate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="--%"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="80dp"/>
+                    android:layout_marginEnd="65dp"
+                    android:text="--%"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JS错误数"
-                    android:layout_marginStart="65dp"/>
+                    android:layout_marginStart="65dp"
+                    android:text="JS错误数" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,30 +76,18 @@
                     android:id="@+id/zhoutongbi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="140dp"
                     android:text="周同比：" />
+
                 <TextView
+                    android:id="@+id/js_week"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/zhoutongbi"
                     android:text="- -% ⬆"
                     android:textColor="#FF5959" />
 
-                <TextView
-                    android:id="@+id/zhoutongbi2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="周同比："
-                    android:layout_toStartOf="@+id/js_comparison_week"/>
 
-                <TextView
-                    android:id="@+id/js_comparison_week"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="- -% ⬆"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="50dp"
-                    android:textColor="#FF5959" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -107,12 +99,14 @@
                     android:layout_height="wrap_content"
                     android:text="环比新增错误: "
                     android:layout_marginStart="130dp"/>
+
                 <TextView
+                    android:id="@+id/js_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0类"
                     android:layout_toEndOf="@id/huanbixinzengcuowu"
-                    android:textColor="#FF5959"/>
+                    android:text="0类"
+                    android:textColor="#FF5959" />
 
             </RelativeLayout>
 

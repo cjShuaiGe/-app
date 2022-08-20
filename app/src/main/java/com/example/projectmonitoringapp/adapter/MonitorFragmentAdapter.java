@@ -28,8 +28,6 @@ public class MonitorFragmentAdapter extends FragmentStateAdapter {
             case 1:
                 return new ApiRequestFragment();
             case 2:
-                return new VisitDetailFragment();
-            case 3:
                 return new ResourceErrorFragment();
             default:
                 return new PerformanceMonitorFragment();
@@ -39,6 +37,6 @@ public class MonitorFragmentAdapter extends FragmentStateAdapter {
     }
 
     public int getItemCount(){
-        return 5;
+        return 4;
     }
 }

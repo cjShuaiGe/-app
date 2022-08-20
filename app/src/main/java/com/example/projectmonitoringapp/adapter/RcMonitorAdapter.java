@@ -106,7 +106,9 @@ public class RcMonitorAdapter extends RecyclerView.Adapter<RcMonitorAdapter.View
           holder.bt_monitor.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                 mactivity.startActivity(new Intent(mactivity, ProjectMonitoringActivity.class));
+                    Intent intent=new Intent(mactivity, ProjectMonitoringActivity.class);
+                    intent.putExtra("projectName",monitor.getProjectName());
+                 mactivity.startActivity(intent);
                }
           });
           holder.bt_freeze.setOnClickListener(new View.OnClickListener() {

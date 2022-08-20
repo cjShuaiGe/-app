@@ -32,6 +32,7 @@
                 android:layout_marginTop="25sp">
 
                 <TextView
+                    android:id="@+id/resource_error_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
@@ -62,12 +63,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true">
+
                 <TextView
                     android:id="@+id/zhoutongbi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="周同比：" />
+
                 <TextView
+                    android:id="@+id/resource_week"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/zhoutongbi"
@@ -88,12 +92,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="环比新增错误: " />
+
                 <TextView
+                    android:id="@+id/resource_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0类"
                     android:layout_toEndOf="@id/huanbixinzengcuowu"
-                    android:textColor="#FF5959"/>
+                    android:text="0类"
+                    android:textColor="#FF5959" />
             </RelativeLayout>
             </RelativeLayout>
 
@@ -137,6 +143,7 @@
             </RelativeLayout>
 
         <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/resource_error_chart"
             android:layout_width="match_parent"
             android:layout_height="350dp"/>
         </LinearLayout>

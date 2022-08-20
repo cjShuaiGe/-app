@@ -22,45 +22,13 @@
             android:layout_marginTop="10dp"
             android:textSize="15sp"/>
     </LinearLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="路径1："
-                android:id="@+id/lujingyi"
-                android:layout_marginStart="20sp"/>
 
-            <TextView
-                android:id="@+id/resource_event_s1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/lujingyi"
-                android:text="xxxxxxxxxxxxxxxxxxxxxxx"
-                android:textColor="#47A7FF" />
-        </RelativeLayout>
-        <RelativeLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rc_resource_event_filename"
             android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="路径1："
-                android:id="@+id/lujinger"
-                android:layout_marginStart="20sp"/>
-
-            <TextView
-                android:id="@+id/resource_event_s2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/lujinger"
-                android:text="xxxxxxxxxxxxxxxxxxxxxxx"
-                android:textColor="#47A7FF" />
-        </RelativeLayout>
+            android:layout_marginTop="5dp"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

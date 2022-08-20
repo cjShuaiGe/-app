@@ -55,15 +55,18 @@ public class RcLogAdapter extends RecyclerView.Adapter<RcLogAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RcLog log=mlist.get(position);
-        holder.name.setText(log.getName());
-        holder.visitNumber.setText(log.getVisitNumber());
-        holder.visitPeople.setText(log.getVisitPeople());
-        holder.error.setText(log.getError());
-        holder.rate.setText(log.getRate()+"%");
+        holder.name.setText(log.getPackageName());
+        holder.visitNumber.setText(log.getVisits());
+        holder.visitPeople.setText(log.getVisits_people());
+        holder.error.setText(log.getDefeatCount());
+        float f= Float.parseFloat(log.getRate())*100f;
+        holder.rate.setText(f+"%");
         holder.detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             mactivity.startActivity(new Intent(mactivity, LogDetailActivity.class));
+                Intent intent=new Intent(mactivity, LogDetailActivity.class);
+                intent.putExtra("packName",log.getPackageName());
+             mactivity.startActivity(intent);
             }
         });
     }

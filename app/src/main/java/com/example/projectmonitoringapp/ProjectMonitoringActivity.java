@@ -52,14 +52,12 @@ public class ProjectMonitoringActivity extends AppCompatActivity {
                         tab.setText("API请求");
                         break;
                     case 2:
-                        tab.setText("访问明细");
-                        break;
-                    case 3:
                         tab.setText("资源错误");
                         break;
-                    case 4:
+                    case 3:
                         tab.setText("性能监控");
                         break;
+
 
                 }
             }

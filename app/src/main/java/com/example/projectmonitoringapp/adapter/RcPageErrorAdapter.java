@@ -40,8 +40,8 @@ public class RcPageErrorAdapter extends RecyclerView.Adapter<RcPageErrorAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             RcPageError pageError=mlist.get(position);
-            holder.error.setText(pageError.getError());
-            holder.page.setText(pageError.getPage());
+            holder.error.setText(pageError.getCount());
+            holder.page.setText(pageError.getUrl());
     }
 
     @Override

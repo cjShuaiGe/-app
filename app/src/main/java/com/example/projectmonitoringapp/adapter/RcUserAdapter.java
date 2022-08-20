@@ -95,29 +95,32 @@ public class RcUserAdapter extends RecyclerView.Adapter<RcUserAdapter.ViewHolder
             System.out.println(user.getUsername());
             holder.tv_freeze_time.setVisibility(View.VISIBLE);
             holder.tv_freeze_time.setText("冻结到："+user.getUnsealDate().substring(0,user.getUnsealDate().indexOf("T")));
+
         }else {holder.tv_freeze_time.setText("");
 
         }
+     if (user.getOnLive()!=null) {
+         if (user.getOnLive().equals("0")) {
 
-        if (user.getOnLive().equals("0")){
-            if (user.getPosition().equals("-1")){
+         } else {
+             holder.onLive.setText("在线");
+             holder.onLive.setBackgroundResource(R.drawable.background_run);
+             holder.onLive.setTextColor(Color.parseColor("#10BE80"));
+         }
+     }else {
+         if (user.getPosition().equals("-1")) {
 //                System.out.println(user.getUsername());
 //                holder.tv_freeze_time.setVisibility(View.VISIBLE);
 //                holder.tv_freeze_time.setText("冻结到："+user.getUnsealDate().substring(0,user.getUnsealDate().indexOf("T")));
-                holder.onLive.setText("冻结");
-                holder.onLive.setBackgroundResource(R.drawable.background_freeze);
-                holder.onLive.setTextColor(Color.parseColor("#FF5959"));
-            }else {
-            holder.onLive.setText("离线");
-            holder.onLive.setBackgroundResource(R.drawable.background_unaudited);
-            holder.onLive.setTextColor(Color.parseColor("#666666"));
-            }
-        } else {
-            holder.onLive.setText("在线");
-            holder.onLive.setBackgroundResource(R.drawable.background_run);
-            holder.onLive.setTextColor(Color.parseColor("#10BE80"));
-        }
-
+             holder.onLive.setText("冻结");
+             holder.onLive.setBackgroundResource(R.drawable.background_freeze);
+             holder.onLive.setTextColor(Color.parseColor("#FF5959"));
+         } else {
+             holder.onLive.setText("离线");
+             holder.onLive.setBackgroundResource(R.drawable.background_unaudited);
+             holder.onLive.setTextColor(Color.parseColor("#666666"));
+         }
+     }
 
         holder.bt_access.setOnClickListener(new View.OnClickListener() {
             @Override

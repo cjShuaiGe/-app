@@ -1,30 +1,27 @@
 package com.example.projectmonitoringapp.model;
 
 public class RcPageError {
-    private String page;
-    private String error;
+    private String url;
+    private String count;
 
-    public RcPageError() {
+    public RcPageError(String url, String count) {
+        this.url = url;
+        this.count = count;
     }
 
-    public RcPageError(String page, String error) {
-        this.page = page;
-        this.error = error;
+    public String getUrl() {
+        return url;
     }
 
-    public String getPage() {
-        return page;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public void setPage(String page) {
-        this.page = page;
+    public String getCount() {
+        return count;
     }
 
-    public String getError() {
-        return error;
-    }
-
-    public void setError(String error) {
-        this.error = error;
+    public void setCount(String count) {
+        this.count = count;
     }
 }
